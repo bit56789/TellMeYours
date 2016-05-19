@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Sedna - A Free HTML5/CSS3 website by Peter Finlan</title>
+    <title>Tell Me Yours</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -41,7 +41,7 @@
                               <li><a href="#">Magic 8 Ball</a></li>
                           </ul>
                           <ul class="member-actions">
-                                <li><a href="index.html" class="btn-white btn-small">Guest User</a></li>
+                                <li><a href="index.html" class="btn-white btn-small">Logout.</a></li>
                           </ul>
                         </nav>
                     </div>
@@ -52,17 +52,35 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <div class="hero-content text-center">
-                        <br><br>
-                        <h3>Your menu should be ... <h3><br>
-                        <h6>....... <h6><br><br>
+                        <h3>Your menu should be . . .<h3>
+                        <h3>===========================================<h3>
+
+                        <?php
+                            $conn = new mysqli("127.0.0.1", "root", "", "tellmeyours");
+                            if ($conn->connect_error) {
+                                die("Connection failed: " . $conn->connect_error);
+                            } 
+                            
+                            $sql = "SELECT menu FROM tb_result WHERE cooking = '".mysql_real_escape_string($_POST['question1'])."' AND 
+                                    meat = '".mysql_real_escape_string($_POST['question2'])."' AND
+                                    spicy = '".mysql_real_escape_string($_POST['question3'])."' AND
+                                    combination = '".mysql_real_escape_string($_POST['question4'])."'";
+
+                            $result = $conn->query($sql);
+
+                            while($row = $result->fetch_array()) {
+                                echo  "<h3>".$row["menu"]."<h3>";
+                            }
+
+                            $conn->close();
+                        ?>
+                        <h3>===========================================<h3>
                         <a href="daily.php" class="btn btn-fill btn-large btn-margin-right">Play Again</a><br><br>
                         <a href="guest.php" class="btn btn-fill btn-large btn-margin-right">Back to Menu</a>
                     </div>
                 </div>
             </div>
-        </div>
-                </div>
-            </header>       
+            </header>  
         </section>
     </section>
 

@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Sedna - A Free HTML5/CSS3 website by Peter Finlan</title>
+    <title>Tell Me Yours</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -40,9 +40,6 @@
                               <li><a href="#">Daily Life Sugestion</a></li>
                               <li><a href="#">Magic 8 Ball</a></li>
                           </ul>
-                          <ul class="member-actions">
-                                <li><a href="index.html" class="btn-white btn-small">Guest User</a></li>
-                          </ul>
                         </nav>
                     </div>
                     <div class="navicon">
@@ -53,9 +50,9 @@
                 <div class="col-md-10 col-md-offset-1">
                     <div class="hero-content text-center">
                         <br><br>
-                        <p><color: black> Please select your gender. <p>
-                        <a href="guest.php" class="btn btn-fill btn-large btn-margin-right">Male</a>
-                        <a href="guest.php" class="btn btn-fill btn-large btn-margin-right">Female</a>
+                        <h3>Please select your gender. <h3>
+                        <a href="guest.php"><img src="img/male.jpg" alt="Male"></a>
+                        <a href="guest.php"><img src="img/female.jpg" alt="female"></a>
                     </div>
                 </div>
             </div>

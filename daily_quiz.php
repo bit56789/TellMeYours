@@ -24,6 +24,14 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
+<style>
+    div {
+        clear: both;
+        margin: 0 50px;
+    }
+</style>
+
+
 <body id="top">
     <!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -41,7 +49,7 @@
                               <li><a href="#">Magic 8 Ball</a></li>
                           </ul>
                           <ul class="member-actions">
-                                <li><a href="index.html" class="btn-white btn-small">Guest User</a></li>
+                                <li><a href="index.html" class="btn-white btn-small">Logout.</a></li>
                           </ul>
                         </nav>
                     </div>
@@ -64,7 +72,7 @@
         </div>
         <div class="down-arrow floating-arrow"><a href="#"><i class="fa fa-angle-down"></i></a></div>
     </section>
-<form name="daily_quiz" id="dailyquiz" method="post" action="daily_submit.php"  >
+<form name="daily_quiz" id="dailyquiz" method="post" action="daily_result.php"  >
 <filedset>
     <section class="features section-padding" id="features">
         
@@ -74,29 +82,18 @@
                     <div class="feature-list">
                         <h3>1. What kind of cooking do you want ?</h3>
                         <p>How your food will be cook.</p>
-                        <ul class="features-stack">
-                            <li class="feature-item">
-                                <div class="feature-content">
-                                    <input type="radio" name="q1"
-                                <?php if (isset($gender) && $gender=="a") echo "checked";?>value="a">
-                                    Fried
-                                </div>
-                            </li>
-                            <li class="feature-item">
-                                <div class="feature-content">
-                                    <input type="radio" name="q1"
-                                <?php if (isset($gender) && $gender=="b") echo "checked";?>value="b">
-                                    Boiled
-                                </div>
-                            </li>
-                            <li class="feature-item">
-                                <div class="feature-content">
-                                    <input type="radio" name="q1"
-                                <?php if (isset($gender) && $gender=="c") echo "checked";?>value="c">
-                                    Stirred
-                                </div>
-                            </li>
-                        </ul>
+                        <div>
+                            <input value="a" type="radio" name="question1" id="radio1" class="radio" required/>
+                            <label for="radio1">Fried</label>
+                        </div>
+                       <div>
+                            <input value="b" type="radio" name="question1" id="radio2" class="radio"/>
+                            <label for="radio2">Boiled</label>
+                        </div>
+                        <div>
+                            <input value="c" type="radio" name="question1" id="radio3" class="radio"/>
+                            <label for="radio3">Stirred</label>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -117,34 +114,22 @@
                         <h3>2. What kind of meat do you prefered ?</h3>
                         <p>Food made with pork, chicken, beef, or seafood</p>
                         <ul class="features-stack">
-                            <li class="feature-item">
-                                <div class="feature-content">
-                                    <input type="radio" name="q2"
-                                <?php if (isset($gender) && $gender=="c") echo "checked";?>value="c">
-                                    Pork & Chicken
-                                </div>
-                            </li>
-                            <li class="feature-item">
-                                <div class="feature-content">
-                                    <input type="radio" name="q2"
-                                <?php if (isset($gender) && $gender=="b") echo "checked";?>value="b">
-                                    Beef
-                                </div>
-                            </li>
-                            <li class="feature-item">
-                                <div class="feature-content">
-                                    <input type="radio" name="q2"
-                                <?php if (isset($gender) && $gender=="a") echo "checked";?>value="a">
-                                    Seafood
-                                </div>
-                            </li>
-                            <li class="feature-item">
-                                <div class="feature-content">
-                                    <input type="radio" name="q2"
-                                <?php if (isset($gender) && $gender=="d") echo "checked";?>value="d">
-                                    Without Meat
-                                </div>
-                            </li>
+                            <div>
+                            <input value="a" type="radio" name="question2" id="radio4" class="radio" required/>
+                            <label for="radio4">Seafood</label>
+                        </div>
+                       <div>
+                            <input value="b" type="radio" name="question2" id="radio5" class="radio"/>
+                            <label for="radio5">Beef</label>
+                        </div>
+                        <div>
+                            <input value="c" type="radio" name="question2" id="radio6" class="radio"/>
+                            <label for="radio6">Pork & Chicken</label>
+                        </div>
+                        <div>
+                            <input value="d" type="radio" name="question2" id="radio7" class="radio"/>
+                            <label for="radio7">No Meat</label>
+                        </div>
                         </ul>
                     </div>
                     </div>
@@ -162,20 +147,14 @@
                         <h3>3. Do you want your food to be spicy ?</h3>
                         <p>The flavor of your food will be spicy or may contain chili.</p>
                         <ul class="features-stack">
-                            <li class="feature-item">
-                                <div class="feature-content">
-                                    <input type="radio" name="q3"
-                                <?php if (isset($gender) && $gender=="a") echo "checked";?>value="a">
-                                    Spicy
-                                </div>
-                            </li>
-                            <li class="feature-item">
-                                <div class="feature-content">
-                                    <input type="radio" name="q3"
-                                <?php if (isset($gender) && $gender=="b") echo "checked";?>value="b">
-                                    Not Spicy
-                                </div>
-                            </li>
+                            <div>
+                            <input value="a" type="radio" name="question3" id="radio8" class="radio" required/>
+                            <label for="radio8">Spicy</label>
+                        </div>
+                       <div>
+                            <input value="b" type="radio" name="question3" id="radio9" class="radio"/>
+                            <label for="radio9">Not Spicy</label>
+                        </div>
                         </ul>
                     </div>
                 </div>
@@ -197,27 +176,18 @@
                         <h3>4. What combination do you prefered in your food ?</h3>
                         <p>Combination with rice, noodles, or other (eg. Steak)</p>
                         <ul class="features-stack">
-                            <li class="feature-item">
-                                <div class="feature-content">
-                                    <input type="radio" name="q4"
-                                <?php if (isset($gender) && $gender=="b") echo "checked";?>value="b">
-                                    Rice
-                                </div>
-                            </li>
-                            <li class="feature-item">
-                                <div class="feature-content">
-                                    <input type="radio" name="q4"
-                                <?php if (isset($gender) && $gender=="a") echo "checked";?>value="a">
-                                    Noodles
-                                </div>
-                            </li>
-                            <li class="feature-item">
-                                <div class="feature-content">
-                                    <input type="radio" name="q4"
-                                <?php if (isset($gender) && $gender=="c") echo "checked";?>value="c">
-                                    Other
-                                </div>
-                            </li>
+                            <div>
+                            <input value="a" type="radio" name="question4" id="radio10" class="radio" required/>
+                            <label for="radio10">Noodles</label>
+                        </div>
+                       <div>
+                            <input value="b" type="radio" name="question4" id="radio11" class="radio"/>
+                            <label for="radio11">Rice</label>
+                        </div>
+                        <div>
+                            <input value="c" type="radio" name="question4" id="radio12" class="radio"/>
+                            <label for="radio12">Other</label>
+                        </div>
                         </ul>
                     </div>
                     </div>

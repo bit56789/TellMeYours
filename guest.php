@@ -41,7 +41,7 @@
                               <li><a href="#">Magic 8 Ball</a></li>
                           </ul>
                           <ul class="member-actions">
-                                <li><a href="index.html" class="btn-white btn-small">Guest User</a></li>
+                                <li><a href="index.html" class="btn-white btn-small">Logout.</a></li>
                           </ul>
                         </nav>
                     </div>
