@@ -83,7 +83,7 @@
                         <h3>1. What kind of cooking do you want ?</h3>
                         <p>How your food will be cook.</p>
                         <div>
-                            <input value="a" type="radio" name="question1" id="radio1" class="radio" required/>
+                            <input value="a" type="radio" name="question1" id="radio1" class="radio" checked required/>
                             <label for="radio1">Fried</label>
                         </div>
                        <div>
@@ -115,7 +115,7 @@
                         <p>Food made with pork, chicken, beef, or seafood</p>
                         <ul class="features-stack">
                             <div>
-                            <input value="a" type="radio" name="question2" id="radio4" class="radio" required/>
+                            <input value="a" type="radio" name="question2" id="radio4" class="radio" checked required/>
                             <label for="radio4">Seafood</label>
                         </div>
                        <div>
@@ -148,7 +148,7 @@
                         <p>The flavor of your food will be spicy or may contain chili.</p>
                         <ul class="features-stack">
                             <div>
-                            <input value="a" type="radio" name="question3" id="radio8" class="radio" required/>
+                            <input value="a" type="radio" name="question3" id="radio8" class="radio" checked required/>
                             <label for="radio8">Spicy</label>
                         </div>
                        <div>
@@ -177,7 +177,7 @@
                         <p>Combination with rice, noodles, or other (eg. Steak)</p>
                         <ul class="features-stack">
                             <div>
-                            <input value="a" type="radio" name="question4" id="radio10" class="radio" required/>
+                            <input value="a" type="radio" name="question4" id="radio10" class="radio" checked required/>
                             <label for="radio10">Noodles</label>
                         </div>
                        <div>
